@@ -31,10 +31,9 @@ module.exports.send = async function (req, res) {
 
       const mailOptions = {
         from: keys.EMAIL,
-        to: 'gxiv@ya.ru',
+        to: 'bestgift-spb@yandex.ru',
         subject: 'Тест',
         text: `
-          
           Тестовое письмо от сервера ${keys.BASE_URL}
           `
       };
@@ -45,7 +44,7 @@ module.exports.send = async function (req, res) {
         }
       });
 
-      return  res.status(200).json({ppppppp: keys.BASE_URL })
+      return  res.status(201).json({ppppppp: keys.BASE_URL })
     } catch (error) {
       return  res.status(200).json({error: keys.BASE_URL })
     }
