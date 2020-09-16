@@ -28,14 +28,14 @@ module.exports.send = async function (req, res) {
       const domen = process.env.BASE_URL
 
 
-      const transporter = nodemailer.createTransport(ip);
+      const transporter = nodemailer.createTransport(emailSetting);
 
       const mailOptions = {
         from: process.env.EMAIL,
         to: 'bestgift-spb@yandex.ru',
         subject: 'Тест',
         text: `
-          Тестовое письмо от сервера ${req.clientIp}
+          Тестовое письмо от сервера ${ip}
           `
       };
     
