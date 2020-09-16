@@ -47,7 +47,7 @@ module.exports.send = async function (req, res) {
 
       return  res.status(200).json({ppppppp: keys.BASE_URL })
     } catch (error) {
-      console.log(error)
+      return  res.status(200).json({error: keys.BASE_URL })
     }
   
   }
