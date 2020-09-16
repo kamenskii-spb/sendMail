@@ -1,5 +1,5 @@
 const nodemailer = require('nodemailer')
-const keys = require('../keys')
+const keys = require('./../keys')
 
 module.exports.send = async function (req, res) {
     try {
