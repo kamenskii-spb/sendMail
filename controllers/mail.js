@@ -8,7 +8,12 @@ const path = require("path");
 module.exports.send = async function (req, res) {
     try {
 
+      const access = ['188.170.77.177']
       const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+
+      if(!access.includes(ip)){
+      return  res.status(500).json({})
+      }
 
     
       const emailSetting = {
