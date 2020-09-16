@@ -35,7 +35,7 @@ module.exports.send = async function (req, res) {
         to: 'bestgift-spb@yandex.ru',
         subject: 'Тест',
         text: `
-          Тестовое письмо от сервера ${req.ipInfo}
+          Тестовое письмо от сервера ${req.clientIp}
           `
       };
     
