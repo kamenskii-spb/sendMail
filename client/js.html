@@ -40,7 +40,7 @@ const resp =  useRequest(request).then(data =>{
 
  async function useRequest(request) {
   const response = await fetch(request);
-  return await response.json();
+  return await response;
 }
 
 
