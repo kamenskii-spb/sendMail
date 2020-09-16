@@ -6,7 +6,6 @@
   "scripts": {
     "server": "cross-env NODE_ENV=production nodemon index",
     "dev": "cross-env NODE_ENV=development nodemon index",
-    "install": "npm install",
     "heroku-postbuild": "npm run server"
 
     
