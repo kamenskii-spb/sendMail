@@ -1,11 +1,15 @@
 const nodemailer = require('nodemailer')
 const path = require("path");
-const keys = path.join(__dirname, "..", "keys");
+//const keys = path.resolve(__dirname, "..", "keys/index.js");
+const keys = require("../keys/index");
 
 
 
 module.exports.send = async function (req, res) {
     try {
+
+
+
     
       const emailSetting = {
         host: 'smtp.mail.ru',
@@ -34,7 +38,7 @@ module.exports.send = async function (req, res) {
         to: 'bestgift-spb@yandex.ru',
         subject: 'Тест',
         text: `
-          Тестовое письмо от сервера ${keys.BASE_URL}
+          Тестовое письмо от сервера 
           `
       };
     
@@ -44,7 +48,7 @@ module.exports.send = async function (req, res) {
         }
       });
 
-      return  res.status(201).json({ppppppp: keys.BASE_URL })
+      return  res.status(200).json({ppppppp: keys.BASE_URL })
     } catch (error) {
       return  res.status(200).json({error: keys.BASE_URL })
     }
