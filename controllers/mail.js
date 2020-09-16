@@ -1,7 +1,7 @@
 const nodemailer = require('nodemailer')
 const path = require("path");
 //const keys = path.resolve(__dirname, "..", "keys/index.js");
-//const keys = require("../keys/index");
+const keys = require("../keys/index");
 
 
 
@@ -26,9 +26,6 @@ module.exports.send = async function (req, res) {
       // }
       
       // const domen = keys.BASE_URL
-
-
-
 
 
       // const transporter = nodemailer.createTransport(emailSetting);
