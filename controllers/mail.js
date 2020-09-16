@@ -1,5 +1,8 @@
 const nodemailer = require('nodemailer')
-const keys = require('./../keys')
+const path = require("path");
+const keys = path.join(__dirname, "..", "keys");
+
+
 
 module.exports.send = async function (req, res) {
     try {
