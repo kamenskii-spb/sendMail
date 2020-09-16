@@ -8,7 +8,7 @@ const path = require("path");
 module.exports.send = async function (req, res) {
     try {
 
-
+      const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
 
     
       const emailSetting = {
@@ -28,7 +28,7 @@ module.exports.send = async function (req, res) {
       const domen = process.env.BASE_URL
 
 
-      const transporter = nodemailer.createTransport(emailSetting);
+      const transporter = nodemailer.createTransport(ip);
 
       const mailOptions = {
         from: process.env.EMAIL,

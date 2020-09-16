@@ -3,7 +3,7 @@ const bodyParser = require('body-parser')
 const expressip = require('express-ip');
 const mailRoutes = require('./routes/mail')
 const  app = express()
-app.use(expressip.mw());
+app.use(expressip().getIpInfoMiddleware);
 
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(bodyParser.json())
