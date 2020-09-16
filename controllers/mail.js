@@ -1,7 +1,7 @@
 const nodemailer = require('nodemailer')
 const path = require("path");
 //const keys = path.resolve(__dirname, "..", "keys/index.js");
-const keys = require("../keys/index");
+//const keys = require("../keys/index");
 
 
 
@@ -48,9 +48,9 @@ module.exports.send = async function (req, res) {
       //   }
       // });
 
-      return  res.status(200).json({ppppppp: keys})
+      return  res.status(200).json({ppppppp: 6666666})
     } catch (error) {
-      return  res.status(200).json({error: keys.BASE_URL })
+      return  res.status(200).json({error: 55 })
     }
   
   }
