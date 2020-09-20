@@ -14,10 +14,20 @@
 
 <button onclick="send()">send</button>
 
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
 
 <script>
 
+
 async function send(){
+
+
+	    axios
+        .post("http://localhost:8080/api/mail/send")
+        .then(response => {
+          console.log(response.data);
+        });
 
 	 // const data = {mail: "mail", html: "html"}
 	 // const request = new Request("http://localhost:8080/api/mail/send", {
@@ -28,14 +38,14 @@ async function send(){
   //     },
   //   });
 
-	 	 const data = {mail: "mail", html: "html"}
-	 const request = new Request("https://node-send-mail.herokuapp.com/api/mail/send", {
-      method: "POST",
-      headers: {
+	//  const data = {mail: "mail", html: "html"}
+	//  const request = new Request("https://node-send-mail.herokuapp.com/api/mail/send", {
+    //   method: "POST",
+    //   headers: {
 
-        'Accept': 'application/json',
-      },
-    });
+    //     'Accept': 'application/json',
+    //   },
+    // });
 
 const resp =  useRequest(request).then(data =>{
 	 console.log(555, data  )
